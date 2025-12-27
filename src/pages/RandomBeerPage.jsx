@@ -23,7 +23,7 @@ function RandomBeersPage() {
   // 3. Use the response data from the Beers API to update the state variable.
   useEffect(() => {
     const fetchRandomBeer = async () => {
-      const response = http.get("/random");
+      const response = await http.get("/random");
       console.log(response.data);
       
       setRandomBeer({...response.data});
